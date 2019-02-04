@@ -1,0 +1,38 @@
+<html>
+ <head>
+  <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+ </head>
+ <body>
+  <script language="Javascript"> 
+  	document.write("Redirecting to Your Store : " + geoplugin_continentCode () ); 
+  	function checkAndRedirect () 
+  	{
+  		var data = geoplugin_continentCode () ; 
+  		// data = 'EU';
+  		if (data == 'EU') 
+  		{
+  			window.location = "https://www.milkshake3d.com/eustore";
+  			return true ; 
+  		}
+  		else if (data == 'US') 
+  		{
+  			window.location = "https://www.milkshake3d.com/usastore";
+  			return true ; 
+  		}
+  		else 
+  		{
+  			window.location = "https://www.milkshake3d.com/intstore";
+  			return true ; 
+  		}
+
+  		return false ; 
+  	}	
+  	var  result = checkAndRedirect () ; 
+  	if (!result) 
+  	{
+  		window.location = "https://www.milkshake3d.com/intstore";
+  	}
+	
+  </script>
+ </body>
+</html>
